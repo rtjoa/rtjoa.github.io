@@ -7,9 +7,13 @@ body {
     font-family: 'Open Sans', 'Lucida Grande', Helvetica, Arial, sans-serif;
 }
 
+.one-line {
+    display: none
+}
+
 #main-wrapper {
     margin: 0 auto;
-    max-width: 43rem;
+    max-width: 42rem;
     padding: 20px;
     width: auto;
     line-height: 1.6;
@@ -29,6 +33,11 @@ body {
     margin-left: 20px;
     max-width: 150px;
     flex: 1 0 80px;
+}
+
+.small-caps {
+    font-variant-caps: small-caps;
+    font-size: 18px;
 }
 
 @media only screen and (max-width: 360px) {
@@ -98,6 +107,25 @@ a, a:link, a:visited {
     border-bottom: 1px solid rgba(125,125,125,0);
 }
 
+a.light {
+    color: black;
+    font-weight: normal;
+}
+
+td {
+    padding-bottom: 10px;
+}
+
+.venue {
+    width: 8em;
+    vertical-align: top;
+}
+
+.author {
+    font-weight: bold;
+    /* text-decoration: underline; */
+}
+
 /* alternate style */
 /* a, a:link, a:visited, a:active, a:hover { */
 /*     color: #009; */
@@ -144,6 +172,13 @@ a, a:link, a:visited {
     }
     a:hover {
         border-bottom: 1px solid rgba(125,125,125,1);
+    }
+    a.light {
+        color: #bbb;
+        border-bottom: none;
+    }
+    a.light:hover {
+        text-decoration: underline;
     }
     .icon-wrapper, #email {
         border: none !important;
