@@ -7,9 +7,13 @@ body {
     font-family: 'Open Sans', 'Lucida Grande', Helvetica, Arial, sans-serif;
 }
 
+.one-line {
+    display: none
+}
+
 #main-wrapper {
     margin: 0 auto;
-    max-width: 43rem;
+    max-width: 42rem;
     padding: 20px;
     width: auto;
     line-height: 1.6;
@@ -96,6 +100,20 @@ a, a:link, a:visited {
     color: blue;
     font-weight: 500;
     border-bottom: 1px solid rgba(125,125,125,0);
+}
+
+td {
+    padding-bottom: 10px;
+}
+
+.venue {
+    width: 8em;
+    vertical-align: top;
+}
+
+.author {
+    font-weight: bold;
+    /* text-decoration: underline; */
 }
 
 /* alternate style */
