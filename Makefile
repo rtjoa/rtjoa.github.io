@@ -1,2 +1,2 @@
-index.html: *.py template.html
-	./main.py > index.html
+index.html: generate_index/*.py template.html
+	./generate_index/main.py > index.html

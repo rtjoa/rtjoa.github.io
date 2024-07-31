@@ -1,1 +1,1 @@
-find template.html *.py | entr make
+find template.html generate_index/*.py | entr make
