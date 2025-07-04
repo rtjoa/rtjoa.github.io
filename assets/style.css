@@ -1,0 +1,162 @@
+html, body {
+    margin: 0;
+}
+
+body {
+    font-size: 16px;
+    font-family: 'Open Sans', 'Lucida Grande', Helvetica, Arial, sans-serif;
+}
+
+.one-line {
+    display: none
+}
+
+#main-wrapper {
+    margin: 0 auto;
+    max-width: 43rem;
+    padding: 20px;
+    width: auto;
+    line-height: 1.6;
+}
+
+#main {
+    height: 100%;
+}
+
+#title {
+    justify-content: space-between;
+    display: flex;
+    line-height: 1.0;
+}
+
+#headshot-wrapper {
+    margin-left: 20px;
+    max-width: 150px;
+    flex: 1 0 80px;
+}
+
+.small-caps {
+    font-variant-caps: small-caps;
+    font-size: 18px;
+}
+
+@media only screen and (max-width: 360px) {
+    #headshot-wrapper {
+        display: none;
+    }
+}
+
+#headshot {
+    width: 100%;
+    height: auto;
+    box-shadow: 0px 1px 5px 0px rgba(124, 125, 135, 0.35);
+    border-radius: 0.25rem;
+}
+
+.mono {
+    font-family: Consolas, monospace;
+    opacity: 0.75;
+}
+
+h1 {
+    font-size: 1.5em;
+    font-weight: 500;
+    margin-bottom: 0;
+}
+
+a:link, a:visited {
+    text-decoration: none;
+}
+
+a:hover, a:active {
+    text-decoration: underline;
+}
+
+.icon {
+    width: 18px;
+    margin-right: 2px;
+    opacity: 0.75;
+    text-decoration: none;
+}
+
+.icon-wrapper:link, .icon-wrapper:active, .icon-wrapper:hover, .icon-wrapper:visited {
+    text-decoration: none;
+}
+
+#email {
+    cursor: pointer;
+    text-decoration: none;
+    font-weight: 400;
+}
+
+#email, #email:link, #email:visited, #email:hover, #email:active {
+    color: black;
+}
+
+#email:hover, #email:active {
+    text-decoration: underline;
+}
+
+h2 {
+    margin-top: 1.4em;
+    font-size: 1.2em;
+}
+a, a:link, a:visited {
+    color: blue;
+    font-weight: 500;
+    border-bottom: 1px solid rgba(125,125,125,0);
+}
+
+a.light {
+    color: black;
+    font-weight: normal;
+}
+
+td {
+    padding-bottom: 10px;
+}
+
+.venue {
+    width: 8em;
+    vertical-align: top;
+}
+
+.author {
+    font-weight: bold;
+    /* text-decoration: underline; */
+}
+
+@media (prefers-color-scheme: dark) {
+    .icon {
+        filter: invert(1);
+    }
+    #email, #email:link, #email:active, #email:hover, #email:active {
+        color: white;
+    }
+    body {
+        color: #bbb;
+        background-color: #111;
+    }
+    h1 {
+        color: white;
+    }
+    a, a:link, a:visited, a:active, a:hover {
+        color: white;
+        text-decoration: none;
+        border-bottom: 1px solid rgba(125,125,125,.4);
+        transition: border .3s ease-in-out;
+    }
+    a:hover {
+        border-bottom: 1px solid rgba(125,125,125,1);
+    }
+    a.light {
+        color: #bbb;
+        border-bottom: none;
+    }
+    a.light:hover {
+        text-decoration: underline;
+    }
+    .icon-wrapper, #email {
+        border: none !important;
+    }
+}
