@@ -54,7 +54,8 @@ body {
 }
 
 .mono {
-    font-family: Consolas, monospace;
+    font-family: Inconsolata, Consolas, monospace;
+    font-size: 18px;
     opacity: 0.75;
 }
 
@@ -100,15 +101,20 @@ a:hover, a:active {
 h2 {
     margin-top: 1.4em;
     font-size: 1.2em;
+    font-weight: 600;
 }
-a, a:link, a:visited {
+a.a, a.a:link, a.a:visited {
     color: blue;
     font-weight: 500;
     border-bottom: 1px solid rgba(125,125,125,0);
 }
 
-a.light {
+a.a.light {
     color: black;
+    font-weight: normal;
+}
+
+a.light-venue {
     font-weight: normal;
 }
 
@@ -117,13 +123,49 @@ td {
 }
 
 .venue {
-    width: 8em;
+    /* width: 8em; */
+    width: 5em;
     vertical-align: top;
+    text-align: right;
+    padding-right: 0.5em;
+}
+
+.em {
+    font-style: italic;
 }
 
 .author {
-    font-weight: bold;
+    font-weight: 600;
     /* text-decoration: underline; */
+}
+
+.smaller {
+    font-size: 0.9em;
+    /* opacity: 0.6; */
+}
+
+.btn-link {
+    display: inline-block;
+    font-size: 0.8em;
+    padding: 0px 5px;
+    margin: 0 1px;
+    border: 1px solid #d0d0d0;
+    border-radius: 3px;
+    background-color: #fafafa;
+    color: #666;
+    text-decoration: none;
+    font-weight: normal;
+    transition: all 0.1s ease;
+    cursor: pointer;
+    font-family: inherit;
+    position: relative;
+    top: -0.5px;
+}
+
+.btn-link:hover {
+    background-color: #f0f0f0;
+    border-color: #d0d0d0;
+    text-decoration: none;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -140,23 +182,38 @@ td {
     h1 {
         color: white;
     }
-    a, a:link, a:visited, a:active, a:hover {
+    a.a, a.a:link, a.a:visited, a.a:active, a.a:hover {
         color: white;
         text-decoration: none;
         border-bottom: 1px solid rgba(125,125,125,.4);
-        transition: border .3s ease-in-out;
+        transition: border .1s ease-in-out;
     }
-    a:hover {
+    a.a:hover {
         border-bottom: 1px solid rgba(125,125,125,1);
     }
-    a.light {
+    a.a.light {
         color: #bbb;
         border-bottom: none;
     }
-    a.light:hover {
+    a.a.light:hover {
         text-decoration: underline;
     }
     .icon-wrapper, #email {
         border: none !important;
+    }
+    /* a.smaller {
+        color: #888;
+    } */
+    
+    .btn-link {
+        background-color: #2a2d31;
+        border-color: #3a3d42;
+        color: #aaa;
+    }
+    
+    .btn-link:hover {
+        background-color: #3a3d42;
+        border-color: #4a4d52;
+        color: #ddd;
     }
 }
