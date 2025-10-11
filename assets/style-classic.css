@@ -1,0 +1,260 @@
+:root {
+    --headshot-size: 120px;
+    --weight-emphasis: 600;
+    --ink: #2a2a2a;
+}
+
+html, body {
+    margin: 0;
+}
+
+body {
+    font-size: 16px;
+    font-family: 'Open Sans', 'Lucida Grande', Helvetica, Arial, sans-serif;
+    color: var(--ink);
+    background: #fafafa;
+}
+
+#main-wrapper {
+    margin: 0 auto;
+    max-width: 42rem;
+    padding: 2.5rem 1.5rem 4rem;
+    line-height: 1.65;
+}
+
+.pub-title {
+    font-weight: var(--weight-emphasis);
+}
+
+#title {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+    line-height: 1.2;
+    margin-bottom: 1.25rem;
+}
+
+#headshot-wrapper {
+    margin-left: 20px;
+    max-width: var(--headshot-size);
+    flex: 1 0 80px;
+}
+
+.small-caps {
+    font-variant-caps: small-caps;
+    font-size: 18px;
+}
+
+@media only screen and (max-width: 360px) {
+    #headshot-wrapper {
+        display: none;
+    }
+}
+
+#headshot {
+    width: 100%;
+    height: auto;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+    aspect-ratio: 1;
+    object-fit: cover;
+}
+
+.mono {
+    font-family: 'Inconsolata', Consolas, monospace;
+    font-size: 1rem;
+    margin: 0;
+}
+
+h1 {
+    font-size: 1.5rem;
+    font-weight: var(--weight-emphasis);
+    letter-spacing: -0.01em;
+    margin: 0;
+    color: #1a1a1a;
+}
+
+p {
+    margin: 0 0 1rem 0;
+}
+
+a:link, a:visited {
+    text-decoration: none;
+}
+
+a:hover, a:active {
+    text-decoration: underline;
+}
+
+.icon {
+    width: 18px;
+    margin-right: 2px;
+    opacity: 0.75;
+    text-decoration: none;
+}
+
+.icon-wrapper:link, .icon-wrapper:active, .icon-wrapper:hover, .icon-wrapper:visited {
+    text-decoration: none;
+}
+
+#email {
+    cursor: pointer;
+    text-decoration: none;
+    font-weight: 400;
+    color: #666;
+    transition: color 0.15s ease;
+}
+
+#email:hover {
+    color: #1a6fb5;
+    text-decoration: none;
+}
+
+h2 {
+    margin: 2.25rem 0 0.75rem;
+    font-size: 1.2em;
+    font-weight: var(--weight-emphasis);
+    color: #1a1a1a;
+}
+
+#papers p {
+    line-height: 1.5;
+    margin-bottom: 1.4rem;
+}
+
+a.a, a.a:link, a.a:visited {
+    color: #1a6fb5;
+    font-weight: var(--weight-emphasis);
+    transition: color 0.15s ease;
+}
+
+a.a:hover {
+    color: #135a94;
+    text-decoration: none;
+}
+
+a.a.light {
+    color: var(--ink);
+    font-weight: normal;
+}
+
+a.a.light:hover {
+    color: #1a6fb5;
+}
+
+a.light-venue {
+    font-weight: normal;
+}
+
+td {
+    padding-bottom: 10px;
+}
+
+.venue {
+    width: 5em;
+    vertical-align: top;
+    text-align: right;
+    padding-right: 0.5em;
+}
+
+.em {
+    font-style: italic;
+}
+
+.author {
+    font-weight: var(--weight-emphasis);
+}
+
+.smaller {
+    font-size: 0.9em;
+}
+
+.btn-link {
+    display: inline-block;
+    font-size: 0.75em;
+    padding: 0 0.5em;
+    margin: 0 1px;
+    border: 1px solid #d0d0d0;
+    border-radius: 3px;
+    background-color: transparent;
+    color: #666;
+    text-decoration: none;
+    font-weight: normal;
+    cursor: pointer;
+    font-family: inherit;
+    vertical-align: baseline;
+}
+
+.btn-link:hover {
+    background-color: #f0f0f0;
+    border-color: #d0d0d0;
+    text-decoration: none;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --ink: #bbb;
+        /* --ink: #b0b0b0; */ /* dimmer body/authors */
+    }
+
+    body {
+        background-color: #111;
+        -webkit-font-smoothing: antialiased;
+    }
+    
+    h1, h2 {
+        color: #fff;
+    }
+    
+    .icon {
+        filter: invert(1);
+    }
+    
+    #email {
+        color: #888;
+    }
+    
+    #email:hover {
+        color: #fff;
+    }
+    
+    a.a, a.a:link, a.a:visited {
+        color: #fff;
+        border-bottom: 1px solid rgba(125,125,125,.4);
+        transition: border .1s ease-in-out;
+    }
+    
+    a.a:hover {
+        color: #fff;
+        border-bottom: 1px solid rgba(255,255,255,0.6);
+    }
+    
+    a.a.light,
+    a.a.light:link,
+    a.a.light:visited {
+        color: var(--ink);
+        font-weight: normal;
+        border-bottom: none;
+    }
+    
+    a.a.light:hover {
+        color: #fff;
+        text-decoration: none;
+    }
+    
+    .icon-wrapper, #email {
+        border: none !important;
+    }
+    
+    .btn-link {
+        background-color: #222;
+        border-color: #3a3a3a;
+        color: #aaa;
+    }
+    
+    .btn-link:hover {
+        background-color: #2a2a2a;
+        border-color: #4a4a4a;
+        color: #ddd;
+    }
+}

@@ -1,0 +1,285 @@
+:root {
+    --headshot-size: 120px;
+    --bg: #f9f9f9;
+    --ink: #444444;
+    --ink-strong: #111111;
+    --muted: #888888;
+    --accent: #1a6fb5;
+    --accent-strong: #135a94;
+    --line: #e0e0e0;
+    --card-hover: rgba(26, 111, 181, 0.05);
+    --serif: 'Source Serif 4', 'Iowan Old Style', Palatino, Georgia, serif;
+}
+
+html, body {
+    margin: 0;
+}
+
+body {
+    font-size: 16px;
+    font-family: 'Open Sans', 'Lucida Grande', Helvetica, Arial, sans-serif;
+    color: var(--ink);
+    background: var(--bg);
+    background-image: radial-gradient(ellipse 80% 24rem at 50% 0%, rgba(26, 111, 181, 0.05), transparent);
+    background-repeat: no-repeat;
+}
+
+::selection {
+    background: var(--accent);
+    color: #ffffff;
+}
+
+#main-wrapper {
+    margin: 0 auto;
+    max-width: 42rem;
+    padding: 3rem 1.5rem 4.5rem;
+    line-height: 1.65;
+}
+
+.pub-title {
+    font-weight: 500;
+}
+
+#title {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    line-height: 1.2;
+    margin-bottom: 1.75rem;
+}
+
+#headshot-wrapper {
+    margin-left: 20px;
+    max-width: var(--headshot-size);
+    flex: 1 0 80px;
+}
+
+.small-caps {
+    font-variant-caps: small-caps;
+    font-size: 18px;
+}
+
+@media only screen and (max-width: 360px) {
+    #headshot-wrapper {
+        display: none;
+    }
+}
+
+#headshot {
+    width: 100%;
+    height: auto;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+    aspect-ratio: 1;
+    object-fit: cover;
+}
+
+.mono {
+    font-family: 'Inconsolata', Consolas, monospace;
+    font-size: 1rem;
+    margin: 0;
+}
+
+h1 {
+    font-family: var(--serif);
+    font-size: 2.2rem;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+    margin: 0;
+    color: var(--ink-strong);
+}
+
+p {
+    margin: 0 0 1rem 0;
+}
+
+a:link, a:visited {
+    text-decoration: none;
+}
+
+a:hover, a:active {
+    text-decoration: underline;
+}
+
+.icon {
+    width: 18px;
+    margin-right: 2px;
+    opacity: 0.75;
+    text-decoration: none;
+}
+
+.icon-wrapper:link, .icon-wrapper:active, .icon-wrapper:hover, .icon-wrapper:visited {
+    text-decoration: none;
+}
+
+#email {
+    cursor: pointer;
+    text-decoration: none;
+    font-weight: 400;
+    color: var(--muted);
+    transition: color 0.15s ease;
+}
+
+#email:hover {
+    color: var(--accent);
+    text-decoration: none;
+}
+
+h2 {
+    font-family: var(--serif);
+    font-style: italic;
+    font-size: 1.35em;
+    font-weight: 600;
+    margin: 2.25rem 0 0.85rem;
+    color: var(--ink-strong);
+}
+
+#papers p {
+    line-height: 1.5;
+    margin: 0 0 1.05rem 0;
+    padding: 0.5rem 0.8rem;
+    border-left: 2px solid var(--line);
+    border-radius: 0 6px 6px 0;
+    transition: border-color 0.2s ease, background-color 0.2s ease;
+}
+
+#papers p:hover {
+    border-left-color: var(--accent);
+    background-color: var(--card-hover);
+}
+
+a.a, a.a:link, a.a:visited {
+    color: var(--accent);
+    font-weight: 500;
+    text-decoration: none;
+    background: linear-gradient(currentColor, currentColor) no-repeat left bottom / 0 1.5px;
+    transition: color 0.15s ease, background-size 0.25s ease;
+}
+
+a.a:hover {
+    color: var(--accent-strong);
+    text-decoration: none;
+    background-size: 100% 1.5px;
+}
+
+a.a.light {
+    color: var(--ink);
+    font-weight: normal;
+}
+
+a.a.light:hover {
+    color: var(--accent);
+}
+
+a.light-venue {
+    font-weight: normal;
+}
+
+td {
+    padding-bottom: 10px;
+}
+
+.venue {
+    width: 5em;
+    vertical-align: top;
+    text-align: right;
+    padding-right: 0.5em;
+}
+
+.em {
+    font-style: italic;
+}
+
+.author {
+    font-weight: 600;
+}
+
+.smaller {
+    font-size: 0.9em;
+}
+
+.btn-link {
+    font-size: 0.78em;
+    margin: 0 0.1em;
+    color: var(--muted);
+    text-decoration: none;
+    font-weight: normal;
+    cursor: pointer;
+    font-family: 'Inconsolata', Consolas, monospace;
+    transition: color 0.15s ease;
+}
+
+.btn-link::before {
+    content: "[";
+}
+
+.btn-link::after {
+    content: "]";
+}
+
+.btn-link:hover {
+    color: var(--accent);
+    text-decoration: none;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --bg: #0f0f0f;
+        --ink: #8a8a8a;
+        --ink-strong: #eeeeee;
+        --ink-title: #aaaaaa;
+        --muted: #666666;
+        --accent: #cccccc;
+        --accent-strong: #ffffff;
+        --line: #2a2a2a;
+        --card-hover: rgba(255, 255, 255, 0.04);
+    }
+
+    body {
+        background-image: radial-gradient(ellipse 80% 24rem at 50% 0%, rgba(255, 255, 255, 0.025), transparent);
+        -webkit-font-smoothing: antialiased;
+    }
+
+    ::selection {
+        background: var(--accent);
+        color: #0f0f0f;
+    }
+
+    a.a, a.a:link, a.a:visited {
+        color: var(--ink-strong);
+    }
+
+    a.a:hover {
+        color: var(--accent-strong);
+    }
+
+    a.a.light, a.a.light:link, a.a.light:visited {
+        color: var(--ink);
+    }
+
+    a.a.light:hover {
+        color: var(--ink-strong);
+    }
+
+    .pub-title {
+        color: var(--ink-title);
+    }
+
+    .author {
+        font-weight: 500;
+        color: var(--ink);
+    }
+
+    .btn-link:hover {
+        color: var(--ink-strong);
+        text-decoration: underline;
+    }
+
+    .icon {
+        filter: invert(1);
+    }
+
+    .icon-wrapper, #email {
+        border: none !important;
+    }
+}
